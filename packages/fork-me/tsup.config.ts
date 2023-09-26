@@ -10,6 +10,7 @@ export default defineConfig(options => ({
 	clean: true,
 	bundle: true,
 	minify: !options.watch,
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-call -- it's ok
 	esbuildPlugins: [reactUseClientPlugin, ignoretestsPlugin(), removeTestidPlugin()],
 	legacyOutput: true,
 }));
